@@ -110,7 +110,7 @@ export default function StickyHeadTable() {
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/adminpanel");
+        const response = await axios.get("https://bca-p1.onrender.com/adminpanel");
         setJobs(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -143,7 +143,7 @@ export default function StickyHeadTable() {
 
   const handleCreateNewJob = async () => {
     try {
-      await axios.post("http://localhost:8000/adminpanel", {
+      await axios.post("https://bca-p1.onrender.com/adminpanel", {
         newJobData,
       });
       setIsDialogOpen(false);
@@ -160,7 +160,7 @@ export default function StickyHeadTable() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/adminpanel?id=${id}`);
+      await axios.delete(`https://bca-p1.onrender.com/adminpanel?id=${id}`);
       alert("Data is deleted");
     } catch (e) {
       alert("Error");
@@ -170,7 +170,7 @@ export default function StickyHeadTable() {
 
   const handleUpdate = async (updatedData) => {
    await axios
-      .put(`http://localhost:8000/adminpanel/${updatedData._id}`, updatedData)
+      .put(`https://bca-p1.onrender.com/adminpanel/${updatedData._id}`, updatedData)
       .then((response) => {
         alert("Data is updated");
       })
