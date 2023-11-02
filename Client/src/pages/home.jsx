@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://bca-p1.onrender.com/");
+        const response = await axios.get("https://bca-p2.onrender.com/");
         setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);

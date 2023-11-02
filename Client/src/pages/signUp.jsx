@@ -29,7 +29,7 @@ export default function SignUp() {
 
     try {
       await axios
-        .post("https://bca-p1.onrender.com/signup", {
+        .post("https://bca-p2.onrender.com/signup", {
           Firstname,
           Lastname,
           Email,
